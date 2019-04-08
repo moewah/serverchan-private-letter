@@ -39,6 +39,10 @@
                     <input type="text" class="form-control" id="text" name="text" placeholder="必填，最长256字节" onkeydown="if(event.keyCode==13) return false;" value="" required>
                 </div>
                 <div class="form-group">
+                    <label for="name"><i class="fa fa-user-o"></i> 您的姓名</label>
+                    <input type="name" class="form-control" id="name" name="name" placeholder="必填，填写您的姓名" onkeydown="if(event.keyCode==13) return false;" value="" required>
+                </div>                             
+                <div class="form-group">
                     <label for="tel"><i class="fa fa-phone"></i> 联系手机</label>
                     <input type="tel" class="form-control" id="tel" name="tel" placeholder="必填，填写您的11位手机号" onkeydown="if(event.keyCode==13) return false;" value="" required>
                 </div>
