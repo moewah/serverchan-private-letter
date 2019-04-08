@@ -37,6 +37,10 @@
                     <input type="text" class="form-control" id="text" name="text" placeholder="必填，最长256字节" onkeydown="if(event.keyCode==13) return false;" value="" required>
                 </div>
                 <div class="form-group">
+                    <label for="tel">联系手机</label>
+                    <input type="tel" class="form-control" id="tel" name="tel" placeholder="必填，填写您的11位手机号" onkeydown="if(event.keyCode==13) return false;" value="" required>
+                </div>                
+                <div class="form-group">
                     <label for="contact">联系邮箱</label>
                     <input type="email" class="form-control" id="contact" name="contact" placeholder="选填，如果需要我回复请填上邮箱" onkeydown="if(event.keyCode==13) return false;" value="">
                 </div>
