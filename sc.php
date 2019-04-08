@@ -52,6 +52,22 @@ if(empty($text)){
     $json['errmsg']="消息标题不能为空啦";
     die(json_encode($json));
 }
+if(isset($_POST["tel"])){
+    $tel = $_POST["tel"];
+}
+
+$preg_tel='/^1[34578]\d{9}$/ims';
+if(!preg_match($preg_tel,$tel)){
+    $json['errno']=2;
+    $json['errmsg']="手机号格式不正确";
+    die(json_encode($json));
+}
+
+if(empty($tel)){
+    $json['errno']=1;
+    $json['errmsg']="手机号不能为空";
+    die(json_encode($json));
+}
 if(isset($_POST["contact"])){
     $contact = $_POST["contact"];
 }
@@ -60,8 +76,8 @@ if(isset($_POST["desp"])){
 }
 
 if(!empty($contact)){
-    $desp .= "  \n**Contact: " . $contact . "**";
+     $desp .= "  \n**邮箱地址: " . $contact . "**";
 }
-$desp .= "  \n**IP: " . getIP() . "**";
-
+$desp .= "  \n**联系手机: " . $tel . "**";
+$desp .= "  \n**访问者IP: " . getIP() . "**";
 echo sc_send($text,$desp);
