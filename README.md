@@ -1,5 +1,5 @@
 # serverchan-private-letter
-一个基于 [serverchan](https://sc.ftqq.com) 微信推送服务的私信发送器，本项目fork @[Tsuk1ko/serverchan-private-letter](https://github.com/Tsuk1ko/serverchan-private-letter)进行的一些小修改。可用于个人博客联系方式等私信发送需求场合，并且会将消息发送者的 IP 和表单提交的邮箱地址、手机号、信息等一并推送至微信。
+一个基于 [serverchan](https://sc.ftqq.com) 微信推送服务的私信发送器，本项目fork @[Tsuk1ko/serverchan-private-letter](https://github.com/Tsuk1ko/serverchan-private-letter)进行的一些小修改。可用于个人博客联系方式等私信发送需求场合，并且会将消息发送者的 IP 和表单提交的用户姓名、邮箱地址、手机号、信息等一并推送至微信。
 
 ## 截图
 
