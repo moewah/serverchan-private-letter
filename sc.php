@@ -52,10 +52,28 @@ if(empty($text)){
     $json['errmsg']="消息标题不能为空啦";
     die(json_encode($json));
 }
+
+if(isset($_POST["name"])){
+    $name = $_POST["name"];
+}
+//校验姓名（纯英文或纯中文）
+$preg_name='/^[\x{4e00}-\x{9fa5}]{2,10}$|^[a-zA-Z\s]*[a-zA-Z\s]{2,20}$/isu';
+ if(!preg_match($preg_name,$name)){
+    $json['errno']=2;
+    $json['errmsg']="姓名格式不正确";
+    die(json_encode($json));
+ }
+
+if(empty($name)){
+    $json['errno']=1;
+    $json['errmsg']="姓名不能为空";
+    die(json_encode($json));
+}
+
 if(isset($_POST["tel"])){
     $tel = $_POST["tel"];
 }
-
+//校验手机号11位指定开头的手机号码
 $preg_tel='/^1[34578]\d{9}$/ims';
 if(!preg_match($preg_tel,$tel)){
     $json['errno']=2;
@@ -75,6 +93,7 @@ if(isset($_POST["desp"])){
     $desp = $_POST["desp"];
 }
 
+$desp .= "  \n**访客姓名: " . $name . "**";
 if(!empty($contact)){
      $desp .= "  \n**邮箱地址: " . $contact . "**";
 }
