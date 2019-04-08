@@ -31,7 +31,7 @@
     <body>
         <div id="form-bg" style="">
             <form role="form" action="sc.php" method="post" id="send_form" class="well">
-                <h4 style="text-align: center;margin-top: 15 !important;margin-bottom: 15px !important;">发送消息</h4>
+                <h4 style="text-align: center;margin-top: 0 !important;">发送消息</h4>
                 <div class="form-group">
                     <label for="text">消息标题</label>
                     <input type="text" class="form-control" id="text" name="text" placeholder="必填，最长256字节" onkeydown="if(event.keyCode==13) return false;" value="" required>
